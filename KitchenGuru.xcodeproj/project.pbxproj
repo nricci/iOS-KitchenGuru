@@ -12,6 +12,7 @@
 		3E207E271EF960E7001655A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E207E251EF960E7001655A5 /* Main.storyboard */; };
 		3E207E291EF960E8001655A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E207E281EF960E8001655A5 /* Assets.xcassets */; };
 		3E207E2C1EF960E8001655A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E207E2A1EF960E8001655A5 /* LaunchScreen.storyboard */; };
+		3E207E341EF965DA001655A5 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E207E331EF965DA001655A5 /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		3E207E281EF960E8001655A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3E207E2B1EF960E8001655A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3E207E2D1EF960E8001655A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E207E331EF965DA001655A5 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				3E207E211EF960E7001655A5 /* AppDelegate.swift */,
 				3E207E231EF960E7001655A5 /* ViewController.swift */,
 				3E207E251EF960E7001655A5 /* Main.storyboard */,
+				3E207E331EF965DA001655A5 /* TableViewCell.swift */,
 				3E207E281EF960E8001655A5 /* Assets.xcassets */,
 				3E207E2A1EF960E8001655A5 /* LaunchScreen.storyboard */,
 				3E207E2D1EF960E8001655A5 /* Info.plist */,
@@ -136,6 +139,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E207E341EF965DA001655A5 /* TableViewCell.swift in Sources */,
 				3E207E241EF960E7001655A5 /* ViewController.swift in Sources */,
 				3E207E221EF960E7001655A5 /* AppDelegate.swift in Sources */,
 			);
