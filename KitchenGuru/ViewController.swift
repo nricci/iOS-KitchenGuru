@@ -18,6 +18,7 @@ class ViewController: UITableViewController {
     @IBOutlet var table: UITableView!
     
     var meals : [[String:Any?]] = []
+    var selectedIndex : IndexPath? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,6 +54,19 @@ class ViewController: UITableViewController {
             }
         }
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.selectedIndex = indexPath
+        performSegue(withIdentifier: "cellChosen", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "cellChosen" {
+            let destination = segue.destination as! RecipyDisplayViewController
+            destination.meal = meals[selectedIndex!.row]
+            destination.mealImage = (table.cellForRow(at: selectedIndex!) as! TableViewCell).thumbnail.image
+        }
     }
     
     

@@ -49,7 +49,6 @@
                                     <outlet property="ingredients" destination="2vd-wD-FYM" id="j0O-AQ-6N6"/>
                                     <outlet property="thumbnail" destination="cmB-Qj-Jdv" id="xCf-cZ-wuu"/>
                                     <outlet property="title" destination="5PZ-cu-nZ2" id="b3v-au-kes"/>
-                                    <segue destination="HHZ-Zy-KY1" kind="show" id="8Oy-ha-LSc"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -61,17 +60,17 @@
                     <navigationItem key="navigationItem" id="TaT-QZ-hir"/>
                     <connections>
                         <outlet property="table" destination="NbI-xq-ggD" id="XcX-uP-TSV"/>
-                        <segue destination="HHZ-Zy-KY1" kind="show" id="RT9-8Q-Ecp"/>
+                        <segue destination="HHZ-Zy-KY1" kind="show" identifier="cellChosen" id="RT9-8Q-Ecp"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H0Z-0T-MtR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="189" y="-1045"/>
         </scene>
-        <!--View Controller-->
+        <!--Recipy Display View Controller-->
         <scene sceneID="bHp-f6-UTn">
             <objects>
-                <viewController id="HHZ-Zy-KY1" sceneMemberID="viewController">
+                <viewController id="HHZ-Zy-KY1" customClass="RecipyDisplayViewController" customModule="KitchenGuru" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qLM-LY-rYi"/>
                         <viewControllerLayoutGuide type="bottom" id="5Vy-wh-S1g"/>
@@ -79,8 +78,33 @@
                     <view key="view" contentMode="scaleToFill" id="Yfv-BU-7Lg">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PZL-Ya-kq2">
+                                <rect key="frame" x="40" y="142" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4We-8c-E62">
+                                <rect key="frame" x="139" y="72" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JOs-Zp-j2z">
+                                <rect key="frame" x="40" y="298" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="PZL-Ya-kq2" id="3hs-kd-KfW"/>
+                        <outlet property="ingredientsLabel" destination="JOs-Zp-j2z" id="2B8-4Z-iUb"/>
+                        <outlet property="titleLabel" destination="4We-8c-E62" id="QzE-UR-bZJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B1y-sU-S3W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -103,7 +127,4 @@
             <point key="canvasLocation" x="-563" y="-1060"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="RT9-8Q-Ecp"/>
-    </inferredMetricsTieBreakers>
 </document>
