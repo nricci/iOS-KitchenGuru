@@ -46,11 +46,17 @@ class ViewController: UITableViewController {
         // Populating cell
         let meal = self.meals[indexPath.row]
         cell.title.text = meal["name"] as! String
-        cell.ingredients.text = (meal["ingredients"] as! [String]).joined(separator: ", ")
+        cell.mealdescription.text = meal["description"] as! String
         // fetch thumbnail
         Alamofire.request(meal["image_url"] as! String).responseData { response in
             if let data = response.result.value {
+                //cell.thumbnail.layer.borderWidth = 1
+                cell.thumbnail.layer.masksToBounds = false
+                //cell.thumbnail.layer.borderColor = UIColor.black.cgColor
+                cell.thumbnail.layer.cornerRadius = cell.thumbnail.frame.height/2
+                cell.thumbnail.clipsToBounds = true
                 cell.thumbnail.image = UIImage(data: data)
+                
             }
         }
         return cell

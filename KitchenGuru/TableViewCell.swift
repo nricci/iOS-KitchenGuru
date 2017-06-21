@@ -12,9 +12,9 @@ class TableViewCell: UITableViewCell {
 
     @IBOutlet weak var title: UILabel!
     
-    @IBOutlet weak var ingredients: UILabel!
     
     @IBOutlet weak var thumbnail: UIImageView!
+    @IBOutlet weak var mealdescription: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
