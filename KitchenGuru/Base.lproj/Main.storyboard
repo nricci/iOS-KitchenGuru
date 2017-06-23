@@ -9,16 +9,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Recipe List View Controller-->
         <scene sceneID="jzT-6u-gHj">
             <objects>
-                <tableViewController id="BUz-ep-imH" customClass="ViewController" customModule="KitchenGuru" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="BUz-ep-imH" customClass="RecipeListViewController" customModule="KitchenGuru" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="81" sectionHeaderHeight="28" sectionFooterHeight="28" id="NbI-xq-ggD">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="81" id="TRR-kq-RRs" customClass="TableViewCell" customModule="KitchenGuru" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="81" id="TRR-kq-RRs" customClass="RecipeCell" customModule="KitchenGuru" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="320" height="81"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TRR-kq-RRs" id="fzl-3K-axF">
@@ -60,17 +60,16 @@
                     <navigationItem key="navigationItem" id="TaT-QZ-hir"/>
                     <connections>
                         <outlet property="table" destination="NbI-xq-ggD" id="XcX-uP-TSV"/>
-                        <segue destination="HHZ-Zy-KY1" kind="show" identifier="cellChosen" id="RT9-8Q-Ecp"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H0Z-0T-MtR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="187.5" y="-1045"/>
         </scene>
-        <!--Recipy Display View Controller-->
+        <!--Recipe View Controller-->
         <scene sceneID="bHp-f6-UTn">
             <objects>
-                <viewController id="HHZ-Zy-KY1" customClass="RecipyDisplayViewController" customModule="KitchenGuru" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RecipeViewController" id="HHZ-Zy-KY1" customClass="RecipeViewController" customModule="KitchenGuru" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qLM-LY-rYi"/>
                         <viewControllerLayoutGuide type="bottom" id="5Vy-wh-S1g"/>
